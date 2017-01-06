@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './styles.css';
+import './styles.scss';
 
 import AwesomeComponent from './AwesomeComponent.jsx';
 

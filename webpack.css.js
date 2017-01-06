@@ -3,9 +3,8 @@ module.exports = function loadCss(paths) {
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          include: paths,
-          loader: ['style-loader', 'css-loader']
+          test: /\.scss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader']
         }
       ]
     }
