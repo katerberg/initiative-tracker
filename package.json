@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -d --watch",
-    "build": "webpack -p"
+    "dev": "cp ./src/client/app/index.html ./src/client/public/index.html && webpack -d --watch",
+    "build": "cp ./src/client/app/index.html ./src/client/public/index.html && webpack -p"
   },
   "author": "",
   "license": "ISC",
