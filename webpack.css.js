@@ -4,7 +4,7 @@ module.exports = function loadCss(paths) {
       loaders: [
         {
           test: /\.s?css$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
+          use: ['style-loader', 'css-loader?modules=true', 'sass-loader']
         }
       ]
     }
