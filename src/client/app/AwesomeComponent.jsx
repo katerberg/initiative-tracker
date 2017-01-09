@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-toolbox/lib/button';
 
 class AwesomeComponent extends React.Component {
   constructor(props) {
@@ -16,7 +17,9 @@ class AwesomeComponent extends React.Component {
     return (
         <div>
             Likes: <span>{this.state.likesCount}</span>
-            <div><button onClick={this.onLike}>Like Me</button></div>
+            <div>
+              <Button label="Like Me" flat primary onClick={this.onLike}/>
+            </div>
         </div>
     );
   }
