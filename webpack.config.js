@@ -17,19 +17,25 @@ const common = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx$/,
         include: PATHS.app,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'react']
+            }
+          }
+        ]
       }
     ]
   },
 };
 
 module.exports = function(env) {
-  return merge([common, performance(), css(PATHS.app)]);
+  const combined = merge([common, performance(), css(PATHS.app)]);
+  console.log(JSON.stringify(combined, null, 2));
+  return combined;
 };

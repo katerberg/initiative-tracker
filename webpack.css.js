@@ -1,10 +1,23 @@
 module.exports = function loadCss(paths) {
   return {
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.s?css$/,
-          use: ['style-loader', 'css-loader?modules=true', 'sass-loader']
+          use: [
+            {
+              loader: 'style-loader'
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true
+              }
+            },
+            {
+              loader: 'sass-loader'
+            }
+          ]
         }
       ]
     }
